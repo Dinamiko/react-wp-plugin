@@ -1,0 +1,6 @@
+node_modules
+vendor
+build
+.idea
+.DS_Store
+coverage

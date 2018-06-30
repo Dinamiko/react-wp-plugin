@@ -1,0 +1,10 @@
+{
+    "name": "react-plugin",
+    "description": "React Plugin",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "ReactPlugin\\": "src/"
+        }
+    }
+}
