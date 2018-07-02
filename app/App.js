@@ -25,7 +25,6 @@ class App extends Component {
             <div className="wrap">
                 <h1>React Plugin</h1>
                 <SettingsForm
-                    data={this.state.settings}
                     submit={(event) => this.onFormSubmit(event)}
                 />
             </div>
