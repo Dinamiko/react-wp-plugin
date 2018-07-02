@@ -5,11 +5,7 @@ export default {
     settings() {
         return {
             getAll: () => axios.get('/wp-json/wp/v2/settings'),
-        }
-    },
-    users() {
-        return {
-            getAll: () => axios.get('/wp-json/wp/v2/users'),
+            updateTitle: (title) => axios.post('/wp-json/wp/v2/settings', {title: title}),
         }
     },
 }

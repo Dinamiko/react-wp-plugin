@@ -13,11 +13,21 @@ class App extends Component {
         this.setState({settings: settings.data});
     }
 
+    onFormSubmit = async (event) => {
+        event.preventDefault();
+
+        const update = await api.settings().updateTitle(event.target.title.value);
+        console.log(update);
+    };
+
     render() {
         return(
             <div className="wrap">
                 <h1>React Plugin</h1>
-                <SettingsForm/>
+                <SettingsForm
+                    data={this.state.settings}
+                    submit={(event) => this.onFormSubmit(event)}
+                />
             </div>
         );
     }
