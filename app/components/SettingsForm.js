@@ -26,7 +26,8 @@ class Form extends Component {
                         <td><input name="title" type="text"
                                    value={this.state.title}
                                    onChange={( event ) => this.onTitleChange(event.target.value)}
-                                   className="regular-text"/></td>
+                                   className="regular-text"/>
+                        </td>
                     </tr>
                     </tbody>
                 </table>

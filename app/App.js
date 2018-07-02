@@ -4,15 +4,6 @@ import SettingsForm from './components/SettingsForm';
 
 class App extends Component {
 
-    state = {
-        settings: []
-    };
-
-    async componentDidMount() {
-        const settings = await api.settings().getAll();
-        this.setState({settings: settings.data});
-    }
-
     onFormSubmit = async (event) => {
         event.preventDefault();
 
@@ -24,9 +15,7 @@ class App extends Component {
         return(
             <div className="wrap">
                 <h1>React Plugin</h1>
-                <SettingsForm
-                    submit={(event) => this.onFormSubmit(event)}
-                />
+                <SettingsForm submit={(event) => this.onFormSubmit(event)}/>
             </div>
         );
     }
